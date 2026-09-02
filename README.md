@@ -264,7 +264,7 @@ An AI supplier score is calculated, and the best supplier is recommended.
 
 ## 👨‍💻 Author
 
-**Kishore**
+**Akilesh**
 
 GitHub: https://github.com/Akilesh1406
 
