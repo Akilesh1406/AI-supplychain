@@ -1,0 +1,152 @@
+.demand-page {
+  width: 100%;
+}
+
+.demand-header {
+  margin-bottom: 30px;
+}
+
+.demand-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.demand-header p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+.prediction-container {
+  max-width: 1000px;
+}
+
+.prediction-controls {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  margin-bottom: 25px;
+}
+
+.prediction-controls label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.control-row {
+  display: flex;
+  gap: 15px;
+}
+
+.control-row select {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+}
+
+.control-row button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.control-row button:hover {
+  background: #1d4ed8;
+}
+
+.control-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.prediction-result {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.prediction-result h2 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.result-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.result-card span {
+  display: block;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.result-card strong {
+  font-size: 24px;
+  color: #1e293b;
+}
+
+.result-card.highlight {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.result-card.highlight strong {
+  color: #2563eb;
+}
+
+.recommendation {
+  margin-top: 22px;
+  padding: 20px;
+  background: #f0fdf4;
+  border-left: 5px solid #16a34a;
+  border-radius: 8px;
+}
+
+.recommendation span {
+  display: block;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.recommendation strong {
+  color: #166534;
+  font-size: 18px;
+}
+
+.error-message {
+  padding: 18px;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .control-row {
+    flex-direction: column;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+}

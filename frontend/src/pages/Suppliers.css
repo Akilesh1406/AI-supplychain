@@ -1,0 +1,130 @@
+.page-container {
+  padding: 40px;
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+.refresh-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.refresh-button:hover {
+  background: #1d4ed8;
+}
+
+.suppliers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.supplier-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+}
+
+.supplier-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.supplier-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eff6ff;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.supplier-card h2 {
+  color: #1e293b;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.location {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.supplier-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.detail-box {
+  background: #f8fafc;
+  padding: 15px 8px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-box span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.detail-box strong {
+  color: #1e293b;
+  font-size: 17px;
+}
+
+.supplier-status {
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.loading,
+.empty-message,
+.error-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.error-message {
+  color: #dc2626;
+  background: #fee2e2;
+  border-radius: 10px;
+}
