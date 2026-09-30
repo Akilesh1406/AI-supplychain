@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from database import get_db
 from models.supplier import Supplier
-from services.supplier_service import get_best_supplier
+from services.supplier_service import get_best_supplier, rank_suppliers
 
 
 router = APIRouter(
@@ -12,10 +12,9 @@ router = APIRouter(
 )
 
 
+# Get the best supplier
 @router.get("/best")
-def recommend_best_supplier(
-    db: Session = Depends(get_db)
-):
+def recommend_best_supplier(db: Session = Depends(get_db)):
 
     suppliers = db.query(Supplier).all()
 
@@ -37,3 +36,35 @@ def recommend_best_supplier(
         "ai_supplier_score": result["score"],
         "recommendation": "BEST SUPPLIER"
     }
+
+
+# Rank all suppliers
+@router.get("/ranking")
+def supplier_ranking(db: Session = Depends(get_db)):
+
+    suppliers = db.query(Supplier).all()
+
+    ranked_suppliers = rank_suppliers(suppliers)
+
+    if not ranked_suppliers:
+        return {
+            "message": "No suppliers available"
+        }
+
+    ranking = []
+
+    for index, item in enumerate(ranked_suppliers, start=1):
+
+        supplier = item["supplier"]
+
+        ranking.append({
+            "rank": index,
+            "supplier_id": supplier.id,
+            "supplier_name": supplier.name,
+            "location": supplier.location,
+            "reliability_score": supplier.reliability_score,
+            "delivery_days": supplier.delivery_days,
+            "ai_supplier_score": item["score"]
+        })
+
+    return ranking

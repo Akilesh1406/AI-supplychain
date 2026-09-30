@@ -34,3 +34,28 @@ def get_best_supplier(suppliers):
         "supplier": best_supplier,
         "score": best_score
     }
+
+
+# Rank all suppliers from best to worst
+def rank_suppliers(suppliers):
+
+    if not suppliers:
+        return []
+
+    ranked_suppliers = []
+
+    for supplier in suppliers:
+
+        score = calculate_supplier_score(supplier)
+
+        ranked_suppliers.append({
+            "supplier": supplier,
+            "score": score
+        })
+
+    ranked_suppliers.sort(
+        key=lambda item: item["score"],
+        reverse=True
+    )
+
+    return ranked_suppliers

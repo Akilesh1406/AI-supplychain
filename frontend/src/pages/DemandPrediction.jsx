@@ -32,7 +32,7 @@ function DemandPrediction() {
 
     try {
       const response = await fetch(
-        `${API_URL}/demand/analyze/${selectedProduct}`
+        `${API_URL}/demand/predict/${selectedProduct}`
       );
 
       if (!response.ok) {
@@ -71,8 +71,8 @@ function DemandPrediction() {
             >
               {products.map((product) => (
                 <option key={product.id} value={product.id}>
-                  {product.name}
-                </option>
+                  {product.name} (ID: {product.id})
+                  </option>
               ))}
             </select>
 

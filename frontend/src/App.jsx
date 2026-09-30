@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import DemandPrediction from "./pages/DemandPrediction";
 import Inventory from "./pages/Inventory";
 import Products from "./pages/Products";
+import SupplierRanking from "./pages/SupplierRanking";
 import SupplierRecommendation from "./pages/SupplierRecommendation";
 import Suppliers from "./pages/Suppliers";
 
@@ -42,12 +43,20 @@ function App() {
             <NavLink to="/supplier-recommendation">
               Supplier Recommendation
             </NavLink>
+
+            <NavLink to="/supplier-ranking">
+              Supplier Ranking
+            </NavLink>
           </nav>
         </aside>
 
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+
+            <Route
+              path="/"
+              element={<Dashboard />}
+            />
 
             <Route
               path="/products"
@@ -73,6 +82,12 @@ function App() {
               path="/supplier-recommendation"
               element={<SupplierRecommendation />}
             />
+
+            <Route
+              path="/supplier-ranking"
+              element={<SupplierRanking />}
+            />
+
           </Routes>
         </main>
 

@@ -1,0 +1,129 @@
+/* AI Analyze Button */
+
+.analyze-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.analyze-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* AI Analysis Section */
+
+.ai-analysis-section {
+  margin-top: 35px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.ai-analysis-section h2 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.analysis-card > h3 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+
+/* Analysis Details */
+
+.analysis-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.analysis-details div {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.analysis-details span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.analysis-details strong {
+  color: #1e293b;
+  font-size: 22px;
+}
+
+
+/* AI Status */
+
+.status-low {
+  color: #dc2626 !important;
+}
+
+.status-good {
+  color: #16a34a !important;
+}
+
+
+/* Recommendation */
+
+.recommendation-box {
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.recommendation-box h3 {
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.recommendation-box p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+
+/* Loading */
+
+.analyzing-text {
+  color: #2563eb;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* Error */
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .analysis-details {
+    grid-template-columns: 1fr;
+  }
+}
